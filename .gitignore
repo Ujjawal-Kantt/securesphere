@@ -1,0 +1,29 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Virtual Environment
+venv/
+env/
+.venv/
+
+# Ignore Jupyter Notebooks Checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore model and data files (if needed)
+models/*.pkl
+data/
+
+# Ignore log files
+logs/
+*.log
+
+# Ignore environment variables (security)
+.env
+config/settings.py

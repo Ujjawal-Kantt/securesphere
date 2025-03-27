@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+databricks
+requests
+openai      # For Conversational AI
+matplotlib  # For data visualization
+pillow      # For image processing

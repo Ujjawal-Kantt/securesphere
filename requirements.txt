@@ -6,3 +6,5 @@ requests
 openai      # For Conversational AI
 matplotlib  # For data visualization
 pillow      # For image processing
+google-generativeai
+python-dotenv

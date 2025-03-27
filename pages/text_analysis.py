@@ -1,11 +1,10 @@
 import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
-import os
 
 # Load environment variables
 load_dotenv()
-GENAI_API_KEY = os.getenv("GEMINIKEY")
+GENAI_API_KEY = st.secrets("GEMINIKEY")
 
 if not GENAI_API_KEY:
     st.error("API Key not found. Set GEMINIKEY in .env file.")

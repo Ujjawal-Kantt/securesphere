@@ -16,15 +16,28 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Sample security logs
 SAMPLE_LOGS = {
-    "Firewall Alert": """[Firewall] Blocked unauthorized access attempt from IP: 192.168.1.10
-    Possible brute-force attack detected on SSH port 22.""",
-    
-    "Phishing Email Log": """[Email Security] Suspicious email detected from sender: hacker@example.com
-    Subject: "Urgent! Reset Your Password"
-    Contains phishing link: http://malicious-site.com""",
-    
-    "Malware Detection": """[Antivirus] Detected malicious file: trojan.exe
-    Quarantined file located at: C:/Users/Admin/Downloads/trojan.exe"""
+    "Firewall Alert": """[Firewall] Blocked unauthorized access attempt from IP: 192.168.1.10  
+    Possible brute-force attack detected on SSH port 22.  
+    - Threat Level: High  
+    - Blocked Attempts: 15 failed login attempts within 30 seconds  
+    - Action Taken: IP temporarily blacklisted for 24 hours  
+    - Recommendation: Enable SSH key-based authentication, use fail2ban, and restrict access to trusted IPs only."""  ,
+
+"Phishing Email Log": """[Email Security] Suspicious email detected from sender: hacker@example.com  
+    Subject: "Urgent! Reset Your Password"  
+    Contains phishing link: http://malicious-site.com  
+    - Threat Level: Critical  
+    - Indicators: Suspicious domain, urgent language, fake branding  
+    - Action Taken: Email quarantined, sender flagged  
+    - Recommendation: Educate users on phishing awareness, enable advanced email filtering, enforce multi-factor authentication."""  ,
+
+"Malware Detection": """[Antivirus] Detected malicious file: trojan.exe  
+    Quarantined file located at: C:/Users/Admin/Downloads/trojan.exe  
+    - Threat Level: Severe  
+    - Behavior: Attempts to encrypt files and connect to a C2 server  
+    - Action Taken: File quarantined, network connection blocked  
+    - Recommendation: Isolate infected system, check for lateral movement, update security patches, enable application whitelisting."""  
+
 }
 
 def analyze_logs_with_gemini(log_text):

@@ -6,7 +6,7 @@ def show():
 
     # Load and display the logo
     try:
-        img = Image.open("assets/logo.png")
+        img = Image.open("assets/logo.jpeg")
         st.image(img, width=200)
     except Exception as e:
         st.error(f"Error loading image: {e}")
